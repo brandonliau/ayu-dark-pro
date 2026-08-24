@@ -1,0 +1,22 @@
+{
+  "name": "ayu-dark-pro",
+  "displayName": "Ayu Dark Pro",
+  "description": "Ayu's colors blended into One Dark Pro Darker's syntax-highlighting roles and UI structure",
+  "version": "1.0.0",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Ayu Dark Pro",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ayu-dark-pro-color-theme.json"
+      }
+    ]
+  }
+}
