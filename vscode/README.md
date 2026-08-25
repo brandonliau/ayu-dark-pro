@@ -234,9 +234,13 @@ extension, named `<publisher>.<name>-<version>`:
 1. Create a folder there named `local.ayu-dark-pro-1.0.0`.
 2. Copy `package.json`, `README.md`, and `themes/ayu-dark-pro-color-theme.json`
    into it.
-3. Fully quit and reopen VS Code (a fresh unpacked extension needs a full
+3. In VS Code, open the Command Palette and run "Developer: Install Extension
+   from Location...", then select that folder. This registers the extension
+   in VS Code's own extension registry, which a restart alone does not do for
+   a folder dropped in after VS Code has already scanned `extensions/` once.
+4. Fully quit and reopen VS Code (a fresh unpacked extension needs a full
    restart to be picked up, not just a window reload).
-4. Open the theme picker (`Cmd/Ctrl+K Cmd/Ctrl+T`, or Preferences: Color
+5. Open the theme picker (`Cmd/Ctrl+K Cmd/Ctrl+T`, or Preferences: Color
    Theme) and select "Ayu Dark Pro".
 
 If it doesn't show up after a full restart, check
