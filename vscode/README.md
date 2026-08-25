@@ -80,7 +80,10 @@ under red-green color vision):
 - **Purple**: hue set to 300 degrees (a magenta-leaning purple, separated from
   blue's hue), lightness set to 60%.
 - **Blue**: saturation raised to a fully clamped 100%.
-- **Red, yellow, cyan**: the 70/30 blend value, no further tuning.
+- **Yellow**: hue set to 54 degrees (separated further from orange's hue, so
+  the two don't read as near-duplicates), lightness lowered 17% on top of
+  that (the raw blend read as too light/washed out at that hue).
+- **Red, cyan**: the 70/30 blend value, no further tuning.
 
 **Family anchors** (One Dark Pro Darker's primary role color, and this
 theme's anchor for the same role):
@@ -89,7 +92,7 @@ theme's anchor for the same role):
 |---|---|---|---|
 | Red | `#e06c75` | `#eb7077` | tags, HTML/JSX attribute names, invalid/error tokens |
 | Orange | `#d19a66` | `#f06436` | numeric literals, constants |
-| Yellow | `#e5c07b` | `#f7b860` | class/type names |
+| Yellow | `#e5c07b` | `#cdb90a` | class/type names |
 | Green | `#98c379` | `#61bc33` | strings |
 | Cyan | `#56b6c2` | `#82d8c8` | regex, some operators/types |
 | Blue | `#61afef` | `#57bdfe` | function/method names |
@@ -149,8 +152,8 @@ of how the editor's syntax colors are tuned:
 | `#ff616e` | `terminal.ansiBrightRed` | `#f07178` |
 | `#8cc265` | `terminal.ansiGreen` | `#7fd962` |
 | `#a5e075` | `terminal.ansiBrightGreen` | `#aad94c` |
-| `#d18f52` | `terminal.ansiYellow` | `#f9af4f` |
-| `#f0a45d` | `terminal.ansiBrightYellow` | `#ffb454` |
+| `#d18f52` | `terminal.ansiYellow` | `#cdb90a` |
+| `#f0a45d` | `terminal.ansiBrightYellow` | `#cdb90a` |
 | `#4aa5f0` | `terminal.ansiBlue` | `#53bdfa` |
 | `#4dc4ff` | `terminal.ansiBrightBlue` | `#59c2ff` |
 | `#c162de` | `terminal.ansiMagenta` | `#cda1fa` |
@@ -212,13 +215,36 @@ The complete set of values needed to build the theme, in one place:
 
 ```
 Backgrounds:      editor tier #151A20   |   chrome tier #12171D
-Family anchors:   red #eb7077  orange #f06436  yellow #f7b860
+Family anchors:   red #eb7077  orange #f06436  yellow #cdb90a
                   green #61bc33  cyan #82d8c8  blue #57bdfe  purple #ff33ff
 Hand overrides:    #29244b -> #3a2253      (peek-view match highlight)
                     #abb2bf -> #97a6ba      (primary text, everywhere)
 Breadcrumb:        idle #5c708a   hover/focus #8fa0b5
 Tab:               activeBorder = tab.border   |   activeBorderTop = activeBackground +18% L
 ```
+
+## Installing
+
+VS Code loads unpacked themes from an `extensions` folder, one subfolder per
+extension, named `<publisher>.<name>-<version>`:
+
+- macOS/Linux: `~/.vscode/extensions/`
+- Windows: `%USERPROFILE%\.vscode\extensions\`
+
+1. Create a folder there named `local.ayu-dark-pro-1.0.0`.
+2. Copy `package.json`, `README.md`, and `themes/ayu-dark-pro-color-theme.json`
+   into it.
+3. Fully quit and reopen VS Code (a fresh unpacked extension needs a full
+   restart to be picked up, not just a window reload).
+4. Open the theme picker (`Cmd/Ctrl+K Cmd/Ctrl+T`, or Preferences: Color
+   Theme) and select "Ayu Dark Pro".
+
+If it doesn't show up after a full restart, check
+`~/.vscode/extensions/.obsolete` for an entry matching
+`local.ayu-dark-pro-1.0.0` and remove it, then check
+`~/.vscode/extensions/extensions.json` has a corresponding entry with
+`identifier.id` set to `local.ayu-dark-pro` (VS Code's own extension registry,
+not just the folder on disk, controls what shows up).
 
 ## Building the theme
 

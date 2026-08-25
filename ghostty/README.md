@@ -17,7 +17,7 @@ cursor-text           = #151a20   # matches background, keeps the glyph under
 palette = 0=#2e3946    # ansiBlack, a dark neutral slate
 palette = 1=#eb7077    # ansiRed
 palette = 2=#61bc33    # ansiGreen
-palette = 3=#f7b860    # ansiYellow
+palette = 3=#cdb90a    # ansiYellow
 palette = 4=#57bdfe    # ansiBlue
 palette = 5=#ff33ff    # ansiMagenta
 palette = 6=#82d8c8    # ansiCyan
@@ -25,7 +25,7 @@ palette = 7=#c3cdd8    # ansiWhite, a light neutral blue-grey
 palette = 8=#3d4b5c    # ansiBrightBlack, a mid neutral slate
 palette = 9=#eb7077    # ansiBrightRed, same as ansiRed
 palette = 10=#61bc33   # ansiBrightGreen, same as ansiGreen
-palette = 11=#f7b860   # ansiBrightYellow, same as ansiYellow
+palette = 11=#cdb90a   # ansiBrightYellow, same as ansiYellow
 palette = 12=#57bdfe   # ansiBrightBlue, same as ansiBlue
 palette = 13=#ff33ff   # ansiBrightMagenta, same as ansiMagenta
 palette = 14=#82d8c8   # ansiBrightCyan, same as ansiCyan
