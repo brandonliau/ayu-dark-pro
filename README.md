@@ -38,11 +38,3 @@ Full details, troubleshooting, and the theme's build spec: `vscode/README.md`
 3. Fully restart Ghostty
 
 Full details and the theme's value reference: `ghostty/README.md`
-
-## Rebuilding either theme from scratch
-
-Both subfolder READMEs are written to be sufficient on their own. The VS Code
-one needs a copy of the "One Dark Pro Darker" theme JSON as its one external
-input (every Ayu value it needs is already listed in it). The Ghostty one
-needs no external input at all, every value it needs is listed directly in
-it.
